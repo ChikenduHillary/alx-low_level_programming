@@ -1,7 +1,10 @@
 #include "main.h"
 #include "6-abs.c"
 #include <stdio.h>
-
+/**
+print_to_98 - prints a given number to 98
+@n: integer to start printing from
+*/
 void print_to_98(int n)
 {
 	int i;
