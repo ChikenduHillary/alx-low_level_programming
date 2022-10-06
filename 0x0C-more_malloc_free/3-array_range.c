@@ -2,33 +2,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * attay_range - range of arrays
+ * array_range - range of arrays
  * @min: min of arrays
  * @max: max of arrays
+ *
  * Return: int value
  */
 int *array_range(int min, int max)
 {
-	int i;
-	int *t;
-	int len;
+	int i, l;
+	int *a;
 
 	if (min > max)
 		return (NULL);
-	len = 0;
-	for (i = min; i <= max; i++)
-		len++;
 
-	t = malloc(sizeof(int) * len);
-	if (t == NULL)
+	l = max - min + 1;
+	a = malloc(sizeof(int) * l);
+
+	if (a == NULL)
 		return (NULL);
 
-	i = 0;
-	while (min <= max)
-	{
-		t[i] = min;
-		i++;
-		min++;
-	}
-	return (t);
+	for (i = 0; i < l; i++, min++)
+		a[i] = min;
+
+	return (a);
 }
