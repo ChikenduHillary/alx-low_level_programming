@@ -8,8 +8,8 @@
  */
 void free_listp2(listp_t **head)
 {
-	list_t *temp;
-	list_t *curr;
+	listp_t *temp;
+	listp_t *curr;
 
 	if (head != NULL)
 	{

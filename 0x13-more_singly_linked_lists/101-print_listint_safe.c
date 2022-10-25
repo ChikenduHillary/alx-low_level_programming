@@ -46,7 +46,7 @@ size_t print_listint_safe(const listint_t *head)
 		new->next = hptr;
 		hptr = new;
 
-		add = htpr;
+		add = hptr;
 
 		while (add->next != NULL)
 		{

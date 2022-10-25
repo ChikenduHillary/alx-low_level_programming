@@ -21,7 +21,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	else
 		new_node->next = *head;
 
-	node_node->n = n;
+	new_node->n = n;
 	/*add new node at the beginning of the list*/
 	*head = new_node;
 
