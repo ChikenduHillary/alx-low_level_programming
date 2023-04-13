@@ -1,26 +1,27 @@
-#include <stdio.h>
+#include<stdio.h>
+
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: always returns 0
+ * Description: print numbers of base16 in lowercase
  *
- */
+ * Return: Always 0 (Success)
+*/
+
 int main(void)
 {
-	unsigned char a = '0';
-	int i;
+	int digit = 48; /*48; decimal rep of 0*/
 
-	for (i = 0; i < 10; i++)
+	while (digit <= 102) /*102; decimal rep of f*/
 	{
-		putchar(a);
-		a++;
-	}
-	a = '1';
-	for (i = 0; i < 6; i++)
-	{
-		putchar('0' + a);
-		a++;
+		putchar(digit);
+
+		/* after 9 we jump till 96; `*/
+		if (digit == 57)
+			digit += 39;
+		++digit;
 	}
 	putchar('\n');
+
 	return (0);
 }

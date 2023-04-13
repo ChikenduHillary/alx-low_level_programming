@@ -1,16 +1,23 @@
 #include <stdio.h>
+
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: alway returns 0
+ * Description: print all aplhabet letters
  *
- */
+ * Return: Always 0 (Success)
+*/
+
 int main(void)
 {
-	char a;
+	char ch = 'a';
 
-	for (a = 'a'; a <= 'z'; a++)
-		putchar(a);
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		++ch;
+	}
 	putchar('\n');
+
 	return (0);
 }

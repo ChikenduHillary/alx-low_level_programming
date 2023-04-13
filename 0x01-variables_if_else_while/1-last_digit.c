@@ -3,29 +3,30 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: always return 0
+ * Description: print the value of n status:
+ *              greater than, is zero and is not less than 6.
  *
- */
+ * Return: Always O (Success)
+*/
+
 int main(void)
 {
-	int n;
-	int lastn;
+	int n, digit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	lastn = n % 10;
 
-	if (lastn > 5)
-	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, lastn);
-	} else if (lastn == 0)
-	{
-		printf("Last digit of %d is %d and is 0\n", n, lastn);
-	} else
-	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastn);
-	}
+	/*my code*/
+	digit = n % 10; /*gets last digit*/
+
+	if (digit > 5)
+		printf("Last digit of %i is %i and is greater than 5\n", n, digit);
+	else if (digit == 0)
+		printf("Last digit of %i is %i and is 0\n", n, digit);
+	else if (digit < 6 && digit != 0)
+		printf("Last digit of %i is %i and is less than 6 and not 0\n", n, digit);
+
 	return (0);
 }
